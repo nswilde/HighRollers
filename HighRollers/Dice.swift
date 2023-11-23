@@ -7,21 +7,45 @@
 
 import Foundation
 
-struct Dice: Identifiable {
+struct Dice {
     var sides: Int
-    let id = UUID()
 }
 
-class DiceData {
-    //storage load/save later
-}
-
-class Results {
-    var result: [Dice]
+class Result: Codable {
+    var id = UUID()
+    var result: [Int]
     
-    init(result: [Dice]) {
+    init(id: UUID = UUID(), result: [Int]) {
+        self.id = id
         self.result = result
     }
 }
 
-
+class ResultsArray {
+    @Published var resultArray = [Result]() {
+        didSet {
+            if let encoded = try? JSONEncoder().encode(resultArray) {
+                try? FileManager().saveDocument(contents: fileName)
+            }
+        }
+    }
+    
+    init() {
+        do {
+            let data = try FileManager().readDocument()
+            let decoder = JSONDecoder()
+            do {
+                if let decoded = try? decoder.decode([Result].self, from: data)  {
+                    resultArray = decoded
+                    return
+                }
+            }
+        } catch {
+            print("Error Initializing")
+        }
+        self.resultArray = resultArray
+        resultArray = []
+    }
+    
+    
+}

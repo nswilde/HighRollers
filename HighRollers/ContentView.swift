@@ -11,8 +11,9 @@ import SwiftUI
 struct ContentView: View {
     let diceOptions = [4, 6, 8, 10, 12, 20, 100]
     @State private var diceSides = 6
-    @State private var rollResult: Int
+    @State private var rollResult = 0
     @State private var rollAmount = 1
+    @State private var showingResult = false
     
     init(diceSides: Int = 6, rollResult: Int) {
         self.diceSides = diceSides
@@ -36,9 +37,12 @@ struct ContentView: View {
                         }
                     }
                 }
-                Section {
-                    HStack {
-                        Text("Results: \(rollResult)")
+                
+                if showingResult {
+                    Section {
+                        HStack {
+                            Text("\(rollResult)")
+                        }
                     }
                 }
             }
@@ -61,10 +65,20 @@ struct ContentView: View {
     
     func diceRoll() {
         rollResult = rollDice()
+        showingResult = true
     }
     
     func rollDice() -> Int {
         return Int.random(in: 1..<diceSides)
+    }
+    
+    func saveRoll(id: UUID, result: Int) {
+        
+        let newdice = Result(id: UUID(), result: rollResult)
+            
+        } else {
+            return
+        }
     }
 }
 
