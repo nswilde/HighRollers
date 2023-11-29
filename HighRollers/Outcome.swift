@@ -1,0 +1,28 @@
+//
+//  Dice.swift
+//  HighRollers
+//
+//  Created by Nikki Wilde on 22/11/23.
+//
+
+import Foundation
+import SwiftUI
+
+
+struct Outcome: Identifiable, Codable {
+    var id = UUID()
+    var type: Int
+    var number: Int
+    var rolls = [Int]()
+    
+    init(type: Int, number: Int) {
+        self.type = type
+        self.number = number
+        
+        for _ in 0..<number {
+            let roll = Int.random(in: 1...type)
+            rolls.append(roll)
+        }
+    }
+}
+	

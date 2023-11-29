@@ -13,7 +13,7 @@
 		54BDBFB02B0D58B200F32D27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDBFAF2B0D58B200F32D27 /* ContentView.swift */; };
 		54BDBFB22B0D58B300F32D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54BDBFB12B0D58B300F32D27 /* Assets.xcassets */; };
 		54BDBFB52B0D58B300F32D27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54BDBFB42B0D58B300F32D27 /* Preview Assets.xcassets */; };
-		54BF51302B0D6008009956EC /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BF512F2B0D6008009956EC /* Dice.swift */; };
+		54BF51302B0D6008009956EC /* Outcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BF512F2B0D6008009956EC /* Outcome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,7 @@
 		54BDBFAF2B0D58B200F32D27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		54BDBFB12B0D58B300F32D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54BDBFB42B0D58B300F32D27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		54BF512F2B0D6008009956EC /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		54BF512F2B0D6008009956EC /* Outcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outcome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			children = (
 				54BDBFAD2B0D58B200F32D27 /* HighRollersApp.swift */,
 				54BDBFAF2B0D58B200F32D27 /* ContentView.swift */,
-				54BF512F2B0D6008009956EC /* Dice.swift */,
+				54BF512F2B0D6008009956EC /* Outcome.swift */,
 				546233CF2B0EC91300E5C1BC /* FileManager.swift */,
 				546233D32B0ECA7D00E5C1BC /* Error.swift */,
 				54BDBFB12B0D58B300F32D27 /* Assets.xcassets */,
@@ -147,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54BDBFB02B0D58B200F32D27 /* ContentView.swift in Sources */,
-				54BF51302B0D6008009956EC /* Dice.swift in Sources */,
+				54BF51302B0D6008009956EC /* Outcome.swift in Sources */,
 				54BDBFAE2B0D58B200F32D27 /* HighRollersApp.swift in Sources */,
 				546233D42B0ECA7D00E5C1BC /* Error.swift in Sources */,
 				546233D02B0EC91300E5C1BC /* FileManager.swift in Sources */,
